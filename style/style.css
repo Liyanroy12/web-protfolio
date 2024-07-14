@@ -194,13 +194,24 @@ footer input[type="text"], footer input[type="email"]{
     display: block;
 }
 
-.hide{
-    display: none;
-}
-
+/* Mobile device */
 @media screen and (max-width: 576px) {
+    .banner{
+        flex-direction: column;
+        margin: 20px;
+    }
+    .header{
+        background-image: none;
+    }
     .Skills-container{
         flex-direction: column;
+    }
+    .banner-profile-pic{
+        width: 100%;
+    }
+    nav, nav > ul{
+        flex-direction: column;
+        gap: 20px;
     }
     .resume-container{
         flex-direction: column;
@@ -217,5 +228,13 @@ footer input[type="text"], footer input[type="email"]{
     }
     footer input[type="text"], footer input[type="email"]{
         width: calc(100% - 5px) / 2;
+    }
+}
+
+/* Tablate specific meadia query */
+
+@media screen and (min-width: 576px) and (max-width: 990px) { 
+    .banner{
+        flex-direction: column;
     }
 }
